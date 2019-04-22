@@ -1,0 +1,548 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*全域*/
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+body {
+  background: #fff5ee;
+  color: #3d1101;
+  font-family: 微軟正黑體;
+  font-weight: bolder;
+}
+
+.title h3 {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  padding: 20px;
+}
+
+.content h4 {
+  text-align: center;
+  margin: 20px 0;
+}
+.content p {
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 24px;
+}
+.title p {
+  font-size: 16px;
+}
+/*header*/
+
+.header {
+  color: #fff;
+  background: #000;
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+}
+
+/*showmenu*/
+.showmenu {
+  background: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.showmenu span,
+.showmenu span::before,
+.showmenu span::after {
+  margin: auto;
+  content: '';
+  background: #fff;
+  display: block;
+  height: 5px;
+  width: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+}
+.showmenu span::before {
+  top: -10px;
+}
+
+.showmenu span::after {
+  top: 10px;
+}
+.menu {
+  display: none;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  width: 48px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.showlist .menu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 0 5%;
+}
+/*banner*/
+.banner {
+  background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_mobile.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1400px;
+  height: 400px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner-content {
+  background: #000;
+  opacity: 0.35;
+  width: 98%;
+  text-align: center;
+  padding: 20px 0;
+}
+/*文字換行*/
+.banner .banner-content h3 span {
+  display: block;
+}
+.fontbig {
+  font-size: 36px;
+  margin-bottom: 5%;
+  padding: 5%;
+}
+
+/*from*/
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login h3 {
+  margin-bottom: 5px;
+}
+.login .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.login-from {
+  border-top: 3px solid #ff5e45;
+  width: 50%;
+  font-size: 18px;
+  padding: 10px;
+  box-shadow: 3px 3px 4px 0px rgba(0, 0, 0, 0.16);
+}
+.login-from p {
+  text-align: center;
+  padding: 15px;
+}
+.from-mail,
+.from-password {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.from-mail input,
+.from-password input {
+  width: 95%;
+}
+
+i {
+  position: absolute;
+  left: 5px;
+  top: calc(50% - 0.5em);
+  opacity: 0.3;
+}
+
+.login-from label {
+  font-size: 16px;
+  line-height: 1.2;
+}
+
+.login-from input {
+  padding: 4px;
+  border-radius: 5px;
+}
+
+.login-from a {
+  text-decoration: none;
+  color: #ff5e45;
+  font-size: 14px;
+}
+.buttom {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+}
+.buttom input {
+  border: none;
+  color: #fff;
+  padding: 5px 30px;
+}
+
+.registered {
+  background: rgba(0, 0, 0, 0.35);
+}
+.login-btn {
+  background: #f56c23;
+}
+/*footer */
+footer {
+  padding: 0 20px;
+}
+
+.titlepic {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+
+footer .title img {
+  width: 249px;
+}
+
+footer .title h3 {
+  margin: 15px 0;
+}
+
+footer .item .content ul {
+  list-style: disc;
+}
+
+.titlepic {
+  display: flex;
+  flex-direction: column;
+}
+.content-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.icon {
+  width: 31px;
+  height: 36px;
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .wrap {
+    margin: 0 auto;
+  }
+
+  .title h3 {
+    font-size: 24px;
+  }
+
+  .header nav {
+    padding: 2% 2%;
+  }
+  .showmenu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    padding: 0 5%;
+  }
+
+  .itemgroup {
+    display: flex;
+  }
+
+  .banner {
+    background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop.png)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner .banner-content {
+    width: 60%;
+  }
+  .banner .banner-content h3 span {
+    display: inline;
+  }
+
+  .login .title h3 {
+    font-size: 48px;
+  }
+
+  .login .title p {
+    font-size: 20px;
+  }
+
+  .login-from {
+    width: 40%;
+  }
+
+  .login-from > input {
+    padding: 8px 10px;
+    width: 90%;
+  }
+
+  .buttom {
+    margin-top: 40px;
+  }
+  .buttom input {
+    width: 45%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+
+  footer .itemgroup .item {
+    width: 33.3%;
+  }
+  footer .itemgroup .titlepic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .icon {
+    margin: 3% 2%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .wrap {
+    margin: 0 auto;
+  }
+
+  .buttom {
+    margin-top: 40px;
+  }
+  .buttom input {
+    width: 45%;
+    padding: 10px 0;
+    font-size: 14px;
+  }
+  .showmenu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .title h3 {
+    font-size: 24px;
+  }
+
+  .header nav {
+    padding: 3% 5%;
+  }
+  .menu li {
+    margin-left: 5px;
+  }
+  .itemgroup {
+    display: flex;
+  }
+
+  .banner {
+    background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop.png)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner .banner-content {
+    width: 50%;
+  }
+  .banner .banner-content h3 span {
+    display: inline;
+  }
+
+  .login .title h3 {
+    font-size: 48px;
+  }
+
+  .login .title p {
+    font-size: 20px;
+  }
+
+  .login-from {
+    width: 40%;
+  }
+
+  .login-from > input {
+    padding: 8px 10px;
+    width: 90%;
+  }
+
+  i {
+    left: 4px;
+  }
+  .from-mail input,
+  .from-password input {
+    width: 98%;
+  }
+
+  footer .itemgroup .item {
+    width: 33.3%;
+  }
+  footer .itemgroup .titlepic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .icon {
+    margin: 3% 2%;
+  }
+}

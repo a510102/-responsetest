@@ -1,0 +1,621 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*全域*/
+.wrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 960px;
+}
+body {
+  background: #fff5ee;
+  color: #3d1101;
+  font-family: 微軟正黑體;
+  font-weight: bolder;
+}
+
+.title h3 {
+  text-align: center;
+  font-size: 32px;
+  margin: 40px 0;
+}
+
+img {
+  width: 100%;
+}
+
+.item {
+  padding: 20px;
+}
+
+.content h4 {
+  text-align: center;
+  margin: 20px 0;
+}
+.content p {
+  line-height: 1.2;
+  font-size: 16px;
+}
+
+.title {
+  font-size: 24px;
+}
+/*header*/
+
+.header {
+  color: #fff;
+  background: #000;
+}
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+}
+
+/*showmenu*/
+.showmenu {
+  background: none;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.showmenu span,
+.showmenu span::before,
+.showmenu span::after {
+  margin: auto;
+  content: '';
+  background: #fff;
+  display: block;
+  height: 5px;
+  width: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+}
+.showmenu span::before {
+  top: -10px;
+}
+
+.showmenu span::after {
+  top: 10px;
+}
+.menu {
+  display: none;
+}
+
+.menu li {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+.menu li a {
+  text-decoration: none;
+  color: #fff;
+  width: 48px;
+  font-size: 16px;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.showlist .menu {
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 0 5%;
+}
+/*banner*/
+.banner {
+  background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_mobile.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 1400px;
+  height: 400px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .banner-content {
+  background: #000;
+  opacity: 0.35;
+  width: 98%;
+  text-align: center;
+  padding: 20px 0;
+}
+/*文字換行*/
+.banner .banner-content h3 span {
+  display: block;
+}
+
+.fontbig {
+  font-size: 36px;
+  margin-bottom: 5%;
+  padding: 5%;
+}
+
+/* main*/
+.main {
+  padding: 40px;
+}
+
+.main img {
+  border-radius: 50%;
+}
+
+/*cooker*/
+.cooker {
+  background: #3d1101 100%;
+}
+.cooker .item {
+  padding: 0;
+}
+.cooker .content {
+  padding: 20px;
+  background: #3d1101;
+  color: #efe9e7;
+}
+.cooker .content h3 {
+  margin-bottom: 20px;
+}
+
+/*aside*/
+.aside {
+  padding: 5px;
+  padding: 5px;
+}
+.aside .pic img {
+  width: 66px;
+  height: 66px;
+  border-radius: 50%;
+}
+.aside .item .pic {
+  display: flex;
+}
+.aside .item h3 {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.aside .content {
+  width: 80%;
+  margin-left: 76px;
+}
+.aside .content p {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/*map*/
+.from {
+  background: rgba(250, 250, 250, 0.7);
+}
+.from .item {
+  padding: 5px;
+}
+
+.from .title {
+  line-height: 1.5;
+  text-align: center;
+  padding: 40px;
+}
+
+.item-from {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.item-from form > input {
+  margin: 10px 0;
+  width: 90%;
+  height: 30px;
+  padding: 0 10px;
+  font-size: 16px;
+}
+
+.from-radio-btn {
+  margin-right: 34px;
+}
+.from-submit {
+  display: flex;
+  justify-content: flex-end;
+}
+.from-btn {
+  margin: 40px 15px;
+}
+.from-submit .from-btn {
+  border: none;
+  width: 70px;
+  height: 32px;
+  border-radius: 3px;
+  color: white;
+}
+.from-submit .remove {
+  background: gray;
+}
+
+.from-submit .send {
+  background: #f56c23;
+}
+
+.remove:active,
+.remove:hover {
+  color: gray;
+  background: white;
+}
+
+.send:active,
+.send:hover {
+  color: #f56c23;
+  background: white;
+}
+
+/*footer */
+footer {
+  padding: 0 20px;
+}
+
+.titlepic {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0;
+}
+]
+footer .title img {
+  width: 249px;
+}
+
+footer .title h3 {
+  margin: 15px 0;
+}
+
+footer .item .content ul {
+  list-style: disc;
+}
+
+.titlepic {
+  display: flex;
+  flex-direction: column;
+}
+.content-icon {
+  display: flex;
+  justify-content: flex-end;
+}
+.icon {
+  width: 31px;
+  height: 36px;
+  margin-top: 40px;
+  margin-left: 5px;
+  margin-bottom: 40px;
+}
+@media (min-width: 500px) and (max-width: 768px) {
+  .wrap {
+    margin: 0 auto;
+  }
+
+  .title h3 {
+    font-size: 24px;
+  }
+
+  .header nav {
+    padding: 2% 2%;
+  }
+  .showmenu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .menu li {
+    padding: 0 5%;
+  }
+
+  .banner {
+    background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop.png)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner .banner-content {
+    width: 60%;
+  }
+  .banner .banner-content h3 span {
+    display: inline;
+  }
+
+  .itemgroup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main .title {
+    position: relative;
+  }
+
+  .main .title h3::before,
+  .main .title h3::after {
+    content: '';
+    display: block;
+    width: 15%;
+    height: 1px;
+    background: #979797;
+    position: absolute;
+    top: 50%;
+  }
+
+  .main .title h3::before {
+    right: 15%;
+  }
+
+  .main .title h3::after {
+    left: 15%;
+  }
+  .main .item {
+    width: 200px;
+  }
+  .cooker .item {
+    display: flex;
+    align-items: center;
+  }
+  .cooker .content {
+    width: 100%;
+  }
+
+  .aside .item .content p {
+    line-height: 1.5;
+  }
+
+  .from .item {
+    display: flex;
+    justify-content: space-between;
+  }
+  .from .item .item-from {
+    width: 35%;
+  }
+  footer .itemgroup .item {
+    width: 33.3%;
+  }
+  footer .itemgroup .titlepic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .icon {
+    margin: 3% 2%;
+  }
+}
+@media screen and (min-width: 769px) {
+  .wrap {
+    margin: 0 auto;
+  }
+
+  .showmenu {
+    display: none;
+  }
+  .menu {
+    display: flex;
+  }
+  .title h3 {
+    font-size: 24px;
+  }
+
+  .header nav {
+    padding: 3% 5%;
+  }
+  .menu li {
+    margin-left: 5px;
+  }
+
+  .banner {
+    background: url(https://hexschool.github.io/Rwd_sketch_export/assets/header_desktop.png)
+      no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner .banner-content {
+    width: 50%;
+  }
+  .banner .banner-content h3 span {
+    display: inline;
+  }
+
+  .itemgroup {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main .title {
+    position: relative;
+  }
+
+  .main .title h3::before,
+  .main .title h3::after {
+    content: '';
+    display: block;
+    width: 15%;
+    height: 2px;
+    background: #979797;
+    position: absolute;
+    top: 50%;
+  }
+
+  .main .title h3::before {
+    right: 18%;
+  }
+
+  .main .title h3::after {
+    left: 18%;
+  }
+  .main .item {
+    width: 200px;
+  }
+  .cooker .item {
+    display: flex;
+    align-items: center;
+  }
+  .cooker.item .pic img {
+    width: 40%;
+  }
+  .cooker .content {
+    width: 40%;
+  }
+
+  .aside .item .content p {
+    line-height: 1.5;
+  }
+
+  .from .item {
+    display: flex;
+    justify-content: space-around;
+  }
+  .from .item .item-from {
+    width: 40%;
+  }
+  footer .itemgroup .item {
+    width: 33.3%;
+  }
+  footer .itemgroup .titlepic {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .icon {
+    margin: 3% 2%;
+  }
+}
